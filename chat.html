@@ -122,7 +122,7 @@
             <footer class="logica grey lighten-2" style="width: 100%;">
                 <div style="display: flex;flex-direction: row ">
                     <div style="width: 100%;margin: 5px; padding: 5px;background: white; border-radius: 5px;">
-                        <textarea placeholder="Digite uma menssagem" class="form-control" id="comment" style="border: unset;outline:none;padding-top: 5px;"></textarea>
+                        <textarea placeholder="Digite uma menssagem" id="comment" style="border: unset;outline:none;padding-top: 5px;"></textarea>
                     </div>
                     <div style="width: 60px;; display: flex; flex-direction: column-reverse">
                         <div style="text-align: center; padding-bottom: 15px;">
@@ -143,6 +143,14 @@
                 //$(".logica").height( $(this).height() + 1);
                 $(this).height($(this).height() + 1);
             };
+            console.log($(this).outerHeight());
+            console.log(this.scrollHeight);
+            console.log(parseFloat($(this).css("borderTopWidth")));
+            console.log( parseFloat($(this).css("borderBottomWidth")) );
+            console.log($(this).height());
+            console.log(":::::::::::::::::");
+
+  
         });
     </script>
 </body>
