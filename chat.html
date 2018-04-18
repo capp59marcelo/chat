@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="componentes/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="componentes/materialize/css/materialize.min.css">
     <link rel="stylesheet" href="chat.css">
     <link rel="stylesheet" href="componentes/fontawesome-free-5.0.10/web-fonts-with-css/css/fontawesome-all.min.css">
-    
+
     <style>
         textarea {
             resize: none;
@@ -37,14 +37,10 @@
                     <div class="form-group" style="width: 100%;margin:5px;">
                         <textarea class="form-control" id="comment"></textarea>
                     </div>
-                    <div style="width: 60px;background: red;">
-
-                        
-
-                                <i class="fa fa-paper-plane" aria-hidden="true"></i>
-
-                   
-
+                    <div style="width: 60px;background: red; display: flex; flex-direction: column-reverse">
+                        <div style="text-align: center; padding-bottom: 15px;">
+                            <i style="font-size: 25px;" class="fa fa-paper-plane" aria-hidden="true"></i>
+                        </div>
                     </div>
                 </div>
 
@@ -53,7 +49,7 @@
         </section>
     </div>
     <script src="componentes/jquery-3.3.1/jquery-3.3.1.min.js"></script>
-    <script src="componentes/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="componentes/materialize/js/materialize.min.js"></script>
     <script>
         $("textarea").bind("input", function (e) {
             while ($(this).outerHeight() < this.scrollHeight + parseFloat($(this).css("borderTopWidth")) + parseFloat($(this).css("borderBottomWidth")) && $(this).height() < 100) {
