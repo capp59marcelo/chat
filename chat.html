@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="componentes/materialize/css/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="componentes/materialize/css/materialize.min.css" media="screen,projection">
     <link rel="stylesheet" href="chat.css">
     <link rel="stylesheet" href="componentes/fontawesome-free-5.0.10/web-fonts-with-css/css/fontawesome-all.min.css">
 
@@ -18,124 +21,186 @@
             background-color: #fff;
             height: 30px;
         }
+
+        .main {
+            padding-left: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (max-width: 995px) {
+            .main {
+                padding-left: unset;
+            }
+
+        }
     </style>
     <title>Chat</title>
 </head>
 
-<body>
-    <div style="height: 100%;width: 100% ;display: flex; flex-direction: row;">
-        <aside id="header-topo" style="height: 100%;min-width: 260px ;max-width:395px;background: red;">
-            <header style="background: green; height: 60px;width: 100%"></header>
+<body style="display: flex;flex-direction: column;">
+  
+    <div style="display: flex; flex-direction: column;">
+      
+            <nav>
 
-        </aside>
-        <section style="background:blue; height: 100%; width: 100%;display: flex; flex-direction: column;">
-            <header style="background: yellow; min-height: 60px;width: 100%"></header>
 
-            <main style="width: 100% ; height: 100%; overflow-x: hidden;padding: 10px 50px;">
-                <div style="height: auto;width: 100%;margin: 10px">
-                    <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
-                    <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px">
-                    <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
-                    <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
-                    <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px">
-                    <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
-                    <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px">
-                    <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
-                    <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px">
-                    <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
-                    <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
-                    <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px">
-                    <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
-                    <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px">
-                    <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
-                    <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px">
-                    <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
-                    <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
-                    <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px">
-                    <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
-                    <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px">
-                    <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
-                    <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px">
-                    <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
-                    <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
-                    <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px">
-                    <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-                <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
-                    <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
-                </div>
-            </main>
-            <footer class="logica grey lighten-2" style="width: 100%;">
-                <div style="display: flex;flex-direction: row ">
-                    <div style="width: 100%;margin: 5px; padding: 5px;background: white; border-radius: 5px;">
-                        <textarea placeholder="Digite uma menssagem" id="comment" style="border: unset;outline:none;padding-top: 5px;"></textarea>
+                <ul id="slide-out" class="sidenav sidenav-fixed">
+                    <li>
+                        <div class="user-view">
+                            <div class="background">
+                                <img src="images/office.jpg">
+                            </div>
+                            <a href="#user">
+                                <img class="circle" src="images/me.jpg">
+                            </a>
+                            <a href="#name">
+                                <span class="white-text name">John Doe</span>
+                            </a>
+                            <a href="#email">
+                                <span class="white-text email">jdandturk@gmail.com</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#!">
+                            <i class="material-icons">cloud</i>First Link With Icon</a>
+                    </li>
+                    <li>
+                        <a href="#!">Second Link</a>
+                    </li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li>
+                        <a class="subheader">Subheader</a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="#!">Third Link With Waves</a>
+                    </li>
+                </ul>
+                <a href="#" data-target="slide-out" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+
+
+            </nav>
+   
+
+
+        <main class="main">
+            <section style="background:blue; height: 100%; width: 100%;display: flex; flex-direction: column;">
+                <main style="width: 100% ; height: 100%; overflow-x: hidden;padding: 10px 50px;">
+                    <div style="height: auto;width: 100%;margin: 10px">
+                        <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
                     </div>
-                    <div style="width: 60px;; display: flex; flex-direction: column-reverse">
-                        <div style="text-align: center; padding-bottom: 15px;cursor: pointer;">
-                            <i style="font-size: 25px;" class="fa fa-paper-plane" aria-hidden="true"></i>
+                    <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
+                        <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px">
+                        <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
+                        <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
+                        <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px">
+                        <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
+                        <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px">
+                        <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
+                        <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px">
+                        <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
+                        <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
+                        <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px">
+                        <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
+                        <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px">
+                        <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
+                        <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px">
+                        <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
+                        <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
+                        <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px">
+                        <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
+                        <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px">
+                        <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
+                        <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px">
+                        <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
+                        <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
+                        <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px">
+                        <div style="background: springgreen;height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;padding-right: 10px;">
+                        <div style="background: rgb(208, 255, 0);height: 30px;width: 150px;margin: 10px"> </div>
+                    </div>
+                </main>
+                <footer class="logica grey lighten-2" style="width: 100%;">
+                    <div style="display: flex;flex-direction: row ">
+                        <div style="width: 100%;margin: 5px; padding: 5px;background: white; border-radius: 5px;">
+                            <textarea placeholder="Digite uma menssagem" id="comment" style="border: unset;outline:none;padding-top: 5px;"></textarea>
+                        </div>
+                        <div style="width: 60px;; display: flex; flex-direction: column-reverse">
+                            <div style="text-align: center; padding-bottom: 15px;cursor: pointer;">
+                                <i style="font-size: 25px;" class="fa fa-paper-plane" aria-hidden="true"></i>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-            </footer>
+                </footer>
 
-        </section>
+            </section>
+
+        </main>
     </div>
     <script src="componentes/jquery-3.3.1/jquery-3.3.1.min.js"></script>
     <script src="componentes/materialize/js/materialize.min.js"></script>
     <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+
         $("textarea").bind("input", function (e) {
             while ($(this).outerHeight() < this.scrollHeight + parseFloat($(this).css("borderTopWidth")) + parseFloat($(this).css("borderBottomWidth")) && $(this).height() < 100) {
                 //$(".logica").height( $(this).height() + 1);
@@ -144,12 +209,14 @@
             console.log($(this).outerHeight());
             console.log(this.scrollHeight);
             console.log(parseFloat($(this).css("borderTopWidth")));
-            console.log( parseFloat($(this).css("borderBottomWidth")) );
+            console.log(parseFloat($(this).css("borderBottomWidth")));
             console.log($(this).height());
             console.log(":::::::::::::::::");
 
-  
+
         });
+
+
     </script>
 </body>
 
