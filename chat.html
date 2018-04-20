@@ -133,11 +133,11 @@
                 <li>
                     <div class="card">
                         <div class="row valign-wrapper">
-                            <div class="col s4">
-                                <img src="images/me.jpg" alt="" class="circle responsive-img">
+                            <div class="col s4" style="display: flex;padding-top: 10px;padding-bottom: 10px;">
+                                <img style="    height: 50px;" src="images/me.jpg" alt="" class="circle responsive-img">
                                 <!-- notice the "circle" class -->
                             </div>
-                            <div class="col s12">
+                            <div class="col s8">
                                 <span class="black-text">
                                     Thiago
                                 </span>
@@ -149,28 +149,33 @@
                 <li>
                     <div class="card">
                         <div class="row valign-wrapper">
-                            <div class="col s4">
-                                <img src="images/me.jpg" alt="" class="circle responsive-img">
+                            <div class="col s4" style="display: flex;padding-top: 10px;padding-bottom: 10px;">
+                                <img style="    height: 50px;" src="images/me.jpg" alt="" class="circle responsive-img">
                                 <!-- notice the "circle" class -->
                             </div>
-                            <div class="col s12">
+                            <div class="col s8">
                                 <span class="black-text">
                                     Thiago
                                 </span>
                             </div>
-                        
-                            <li>
-                                <div class="card">
-                                    <div class="row valign-wrapper">
-                                        <div class="col s4">
-                                            <img src="images/me.jpg" alt="" class="circle responsive-img">
-                                            <!-- notice the "circle" class -->
-                                        </div>
-                                        <div class="col s12">
-                                            <span class="black-text">
-                                                Thiago
-                                            </span>
-                                        </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                        <div class="row valign-wrapper">
+                            <div class="col s4" style="display: flex;padding-top: 10px;padding-bottom: 10px;">
+                                <img style="    height: 50px;" src="images/me.jpg" alt="" class="circle responsive-img">
+                                <!-- notice the "circle" class -->
+                            </div>
+                            <div class="col s8">
+                                <span class="black-text">
+                                    Thiago
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
             </ul>
             <a href="#" data-target="slide-out" class="sidenav-trigger">
                 <i class="material-icons">menu</i>
@@ -335,13 +340,13 @@
                 // for box-sizing other than "content-box" use:
                 // el.style.cssText = '-moz-box-sizing:content-box';
                 el.style.cssText = 'height:' + el.scrollHeight + 'px';
-                 if(el.value == '' ){
+                if (el.value == '') {
                     el.style.cssText = 'height:' + 22 + 'px';
-                 }
+                }
                 // console.log(el.style.cssText);
-                
+
             }, 0);
-            
+
         }
 
 
