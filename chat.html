@@ -14,15 +14,12 @@
     <link rel="stylesheet" href="componentes/fontawesome-free-5.0.10/web-fonts-with-css/css/fontawesome-all.min.css">
 
     <style>
-       
-
-
     </style>
     <title>Chat</title>
 </head>
 
 <body style="display: flex;flex-direction: column;">
-
+    
     <div style="display: flex; flex-direction: column; height: 100%;">
 
         <nav style="min-height: 70px;">
@@ -46,10 +43,11 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#!"><i class="fas fa-users" style="font-size: 2em"></i>Contatos </a>
+                    <a href="#!">
+                        <i class="fas fa-users" style="font-size: 2em"></i>Contatos </a>
                 </li>
                 <li>
-                    <ul  style="height: 67vh;overflow-x: hidden; overflow-y: auto; padding-bottom: 30px;">
+                    <ul style="height: 67vh;overflow-x: hidden; overflow-y: auto; padding-bottom: 30px;">
                         <li>
                             <div class="card">
                                 <div class="row valign-wrapper" style="margin-bottom: -10px;">
@@ -546,7 +544,10 @@
                         </div>
                         <div style="width: 70px;; display: flex; flex-direction: column-reverse">
                             <div style="text-align: center; padding-bottom: 9px;cursor: pointer;">
+                                <button id="btn-enviar" type="button" value="" style="background: unset;border: unset;cursor: pointer;">
                                 <i style="font-size: 25px;" class="fa fa-paper-plane" aria-hidden="true"></i>
+                                </button>
+
                             </div>
                         </div>
                     </div>
@@ -562,6 +563,19 @@
     <script>
         $(document).ready(function () {
             $('.sidenav').sidenav();
+
+            $("#btn-enviar").click(function(){
+                $(".container-msg").append(
+                    "<div style='height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;'>"
+                        +"<span class='quinaRight'></span>"                   
+                        +"<div class='testeRight'> <span>"+$('#comment').val()+"</span>  <span style='float: right;padding-top: 5px;font-size: 11px;'>10:20</span> </div>" 
+                    +"</div>"
+                );
+                $(".container-msg").animate({scrollTop: $('.container-msg').prop("scrollHeight")}, 500);
+                $('#comment').val('');
+                $('#comment').focus();
+                $('#comment').css('height','22px');
+            });
         });
 
         var textarea = document.querySelector('textarea');
@@ -587,6 +601,8 @@
             }, 0);
 
         }
+
+
 
 
     </script>
