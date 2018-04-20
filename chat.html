@@ -55,11 +55,15 @@
         }
 
         textarea {
-            resize: none;
+            height: 22px;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            padding-left: 10px;
             width: 100%;
-            overflow-y: auto;
-            background-color: #fff;
-            height: 30px;
+            display: block;
+            outline: none;
+            border: unset;
+            resize: unset;
         }
 
         .main {
@@ -206,7 +210,7 @@
                         </div>
                     </div>
                     <div style="height: auto;width: 100%;margin: 10px">
-                        <span class="quinaLeft"></span> 
+                        <span class="quinaLeft"></span>
                         <div class="teste">
                             Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o
                             século XVI, quando um impressoo eletrônica como Aldus PageMaker.
@@ -225,7 +229,8 @@
                             recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
 
                         </div>
-                    </div> <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;">
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;">
                         <span class="quinaRight"></span>
                         <div class="testeRight">
                             Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o
@@ -236,7 +241,8 @@
                             recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
 
                         </div>
-                    </div> <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;">
+                    </div>
+                    <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;">
                         <span class="quinaRight"></span>
                         <div class="testeRight">
                             Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o
@@ -251,32 +257,32 @@
                     <div style="height: auto;width: 100%;margin: 10px">
                         <span class="quinaLeft"></span>
                         <div class="teste">
-                           <span> Lorem Ipsum é </span>
+                            <span> Lorem Ipsum é </span>
 
                         </div>
                     </div>
                     <div style="height: auto;width: 100%;margin: 10px">
                         <span class="quinaLeft"></span>
                         <div class="teste">
-                           <span> Lorem Ipsum é </span>
+                            <span> Lorem Ipsum é </span>
 
                         </div>
                     </div>
                     <div style="height: auto;width: 100%;margin: 10px">
                         <span class="quinaLeft"></span>
                         <div class="teste">
-                           <span> Lorem Ipsum é </span>
+                            <span> Lorem Ipsum é </span>
 
                         </div>
                     </div>
                     <div style="height: auto;width: 100%;margin: 10px">
                         <span class="quinaLeft"></span>
                         <div class="teste">
-                           <span> Lorem Ipsum é </span>
+                            <span> Lorem Ipsum é </span>
 
                         </div>
                     </div>
-                    
+
 
                     <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;">
                         <span class="quinaRight"></span>
@@ -290,7 +296,9 @@
                 <footer class="logica grey lighten-2" style="width: 100%;">
                     <div style="display: flex;flex-direction: row ">
                         <div style="width: 100%;margin: 5px; padding: 5px;background: white; border-radius: 5px;">
-                            <textarea placeholder="Digite uma menssagem" id="comment" style="border: unset;outline:none;padding-top: 5px;"></textarea>
+                            <div style="overflow-y: auto; overflow-x: hidden; max-height: 144px;">
+                                <textarea placeholder="Digite uma menssagem" id="comment"></textarea>
+                            </div>
                         </div>
                         <div style="width: 60px;; display: flex; flex-direction: column-reverse">
                             <div style="text-align: center; padding-bottom: 15px;cursor: pointer;">
@@ -312,20 +320,29 @@
             $('.sidenav').sidenav();
         });
 
-        $("textarea").bind("input", function (e) {
-            while ($(this).outerHeight() < this.scrollHeight + parseFloat($(this).css("borderTopWidth")) + parseFloat($(this).css("borderBottomWidth")) && $(this).height() < 100) {
-                //$(".logica").height( $(this).height() + 1);
-                $(this).height($(this).height() + 1);
-            };
-            console.log($(this).outerHeight());
-            console.log(this.scrollHeight);
-            console.log(parseFloat($(this).css("borderTopWidth")));
-            console.log(parseFloat($(this).css("borderBottomWidth")));
-            console.log($(this).height());
-            console.log(":::::::::::::::::");
+        var textarea = document.querySelector('textarea');
 
+        textarea.addEventListener('keydown', autosize);
 
-        });
+        function autosize() {
+            var el = this;
+            setTimeout(function () {
+                // if(el.style.cssText == 'height: 32px;')
+                // {
+                //     console.log("passei");
+                // }
+                el.style.cssText = 'min-height:22px;height:auto; padding:0';
+                // for box-sizing other than "content-box" use:
+                // el.style.cssText = '-moz-box-sizing:content-box';
+                el.style.cssText = 'height:' + el.scrollHeight + 'px';
+                 if(el.value == '' ){
+                    el.style.cssText = 'height:' + 22 + 'px';
+                 }
+                // console.log(el.style.cssText);
+                
+            }, 0);
+            
+        }
 
 
     </script>
