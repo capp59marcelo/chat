@@ -19,7 +19,7 @@
 </head>
 
 <body style="display: flex;flex-direction: column;">
-    
+
     <div style="display: flex; flex-direction: column; height: 100%;">
 
         <nav style="min-height: 70px;">
@@ -42,9 +42,43 @@
                         </a>
                     </div>
                 </li>
-                <li>
-                    <a href="#!">
-                        <i class="fas fa-users" style="font-size: 2em"></i>Contatos </a>
+                <li style="display: flex;">
+                    <ul id="slide-out2" class="sidenav">
+                        <li>
+                            <div class="user-view">
+                                <div class="background">
+                                    <img src="images/office.jpg">
+                                </div>
+                                <a href="#user">
+                                    <img class="circle" src="images/yuna.jpg">
+                                </a>
+                                <a href="#name">
+                                    <span class="white-text name">John Doe</span>
+                                </a>
+                                <a href="#email">
+                                    <span class="white-text email">jdandturk@gmail.com</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a>
+                                <i class="material-icons">cloud</i>First Link With Icon</a>
+                        </li>
+                        <li>
+                            <a href="#!">Second Link</a>
+                        </li>
+                        <li>
+                            <div class="divider"></div>
+                        </li>
+                        <li>
+                            <a class="subheader">Subheader</a>
+                        </li>
+                        <li>
+                            <a class="waves-effect" >Third Link With Waves</a>
+                        </li>
+                    </ul>
+                    <a href="#" data-target="slide-out2" class="sidenav-trigger">
+                        <i class="fas fa-users" style="font-size: 2em"></i>Contatos</a>
                 </li>
                 <li>
                     <ul style="height: 67vh;overflow-x: hidden; overflow-y: auto; padding-bottom: 30px;">
@@ -545,7 +579,7 @@
                         <div style="width: 70px;; display: flex; flex-direction: column-reverse">
                             <div style="text-align: center; padding-bottom: 9px;cursor: pointer;">
                                 <button id="btn-enviar" type="button" value="" style="background: unset;border: unset;cursor: pointer;">
-                                <i style="font-size: 25px;" class="fa fa-paper-plane" aria-hidden="true"></i>
+                                    <i style="font-size: 25px;" class="fa fa-paper-plane" aria-hidden="true"></i>
                                 </button>
 
                             </div>
@@ -562,19 +596,20 @@
     <script src="componentes/materialize/js/materialize.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('.sidenav').sidenav();
+            $('#slide-out').sidenav();
+            $('#slide-out2').sidenav();
 
-            $("#btn-enviar").click(function(){
+            $("#btn-enviar").click(function () {
                 $(".container-msg").append(
                     "<div style='height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;'>"
-                        +"<span class='quinaRight'></span>"                   
-                        +"<div class='testeRight'> <span>"+$('#comment').val()+"</span>  <span style='float: right;padding-top: 5px;font-size: 11px;'>10:20</span> </div>" 
-                    +"</div>"
+                    + "<span class='quinaRight'></span>"
+                    + "<div class='testeRight'> <span>" + $('#comment').val() + "</span>  <span style='float: right;padding-top: 5px;font-size: 11px;'>10:20</span> </div>"
+                    + "</div>"
                 );
-                $(".container-msg").animate({scrollTop: $('.container-msg').prop("scrollHeight")}, 500);
+                $(".container-msg").animate({ scrollTop: $('.container-msg').prop("scrollHeight") }, 500);
                 $('#comment').val('');
                 $('#comment').focus();
-                $('#comment').css('height','22px');
+                $('#comment').css('height', '22px');
             });
         });
 
