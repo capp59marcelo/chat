@@ -622,44 +622,62 @@
                 $('#comment').css('height', '22px');
             });
 
-            $('input, textarea').on('keydown', function (e) {
-                console.log( $('#comment').text() );
-                console.log( $('#comment').text() != "" );
-                if($('#comment').val() === '')
-                {
-                    if (e.keyCode == 13 && $('#comment').text() == '') {
-                        e.preventDefault();
-                        $("#btn-enviar").click();
-                    }
+            $("#comment").keydown(function (e) {
+                var elemento = this;
+                var tecla = e;
+                if (e.keyCode == 13 && $(this).val() == '') {
+                    return false;
+
+                }
+                else {
+                    setTimeout(function () {
+                        $(elemento).css({ "min-height": "22px", "height": "auto", "padding": "0" });
+
+                        $(elemento).css("height", $(elemento).prop('scrollHeight') + "px");
+
+                        if ($(elemento).val() == '') {
+                            $(elemento).css("height", "22px");
+                        }
+                        if($(elemento).val() != '' && tecla.keyCode == 13)
+                        {
+                            $("#btn-enviar").click();
+                        }
+                    }, 0);
+
                 }
             });
         });
 
-        var textarea = document.querySelector('textarea');
+     //   var textarea = document.querySelector('textarea');
 
 
-        textarea.addEventListener('keydown', autosize);
+       // textarea.addEventListener('keydown', autosize);
 
-        function autosize() {
-            var el = this;
+       // function autosize() {
 
-            setTimeout(function () {
+
+
+         //   var el = this;
+         //   console.log("this " + this);
+         //   console.log($(this).val().length);
+
+         //   setTimeout(function () {
                 // if(el.style.cssText == 'height: 32px;')
                 // {
                 //     console.log("passei");
                 // }
-                el.style.cssText = 'min-height:22px;height:auto; padding:0';
-                // for box-sizing other than "content-box" use:
-                // el.style.cssText = '-moz-box-sizing:content-box';
-                el.style.cssText = 'height:' + el.scrollHeight + 'px';
-                if (el.value == '') {
-                    el.style.cssText = 'height:' + 22 + 'px';
-                }
+                // el.style.cssText = 'min-height:22px;height:auto; padding:0';
+                // // for box-sizing other than "content-box" use:
+                // // el.style.cssText = '-moz-box-sizing:content-box';
+                // el.style.cssText = 'height:' + el.scrollHeight + 'px';
+                // if (el.value == '') {
+                //     el.style.cssText = 'height:' + 22 + 'px';
+                // }
                 // console.log(el.style.cssText);
 
-            }, 0);
+        //    }, 0);
 
-        }
+      //  }
 
 
 
