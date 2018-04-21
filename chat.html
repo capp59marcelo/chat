@@ -582,7 +582,7 @@
                         <span class="quinaRight"></span>
                         <div class="testeRight">
                             <span>
-                                Lorem 
+                                Lorem
                             </span>
                             <span style="float: right;padding-top: 5px;font-size: 11px;">10:20</span>
                         </div>
@@ -617,18 +617,21 @@
         $(document).ready(function () {
             $('#slide-out').sidenav();
             $('#slide-out2').sidenav();
-
+            $(".container-msg").animate({ scrollTop: $('.container-msg').prop("scrollHeight") }, 0);
             $("#btn-enviar").click(function () {
-                $(".container-msg").append(
-                    "<div style='height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;'>"
-                    + "<span class='quinaRight'></span>"
-                    + "<div class='testeRight'> <span style=' word-wrap: break-word;    white-space: pre-line;'>" + $.trim($('#comment').val()) + "</span>  <span style='float: right;padding-top: 5px;font-size: 11px;'>10:20</span> </div>"
-                    + "</div>"
-                );
-                $(".container-msg").animate({ scrollTop: $('.container-msg').prop("scrollHeight") }, 500);
-                $('#comment').val('');
-                $('#comment').focus();
-                $('#comment').css('height', '22px');
+                if ( $('#comment').val().trim().length > 0) {
+
+                    $(".container-msg").append(
+                        "<div style='height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;'>"
+                        + "<span class='quinaRight'></span>"
+                        + "<div class='testeRight'> <span style=' word-wrap: break-word;    white-space: pre-line;'>" + $.trim($('#comment').val()) + "</span>  <span style='float: right;padding-top: 5px;font-size: 11px;'>10:20</span> </div>"
+                        + "</div>"
+                    );
+                    $(".container-msg").animate({ scrollTop: $('.container-msg').prop("scrollHeight") }, 500);
+                    $('#comment').val('');
+                    $('#comment').focus();
+                    $('#comment').css('height', '22px');
+                }
             });
 
             $("#comment").keydown(function (e) {
@@ -641,10 +644,8 @@
                     return false;
                 }
                 else {
-                    console.log( !$(elemento).val().trim() );
                     setTimeout(function () {
-                        if ($(elemento).length === 0 || !$(elemento).val().trim() )
-                        {
+                        if ($(elemento).length === 0 || !$(elemento).val().trim()) {
                             $(elemento).val('');
                             $(elemento).css("height", "22px");
                             return false;
