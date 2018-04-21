@@ -613,7 +613,7 @@
                 $(".container-msg").append(
                     "<div style='height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;'>"
                     + "<span class='quinaRight'></span>"
-                    + "<div class='testeRight'> <span>" + $('#comment').val() + "</span>  <span style='float: right;padding-top: 5px;font-size: 11px;'>10:20</span> </div>"
+                    + "<div class='testeRight'> <pre>" + $('#comment').val() + "</pre>  <span style='float: right;padding-top: 5px;font-size: 11px;'>10:20</span> </div>"
                     + "</div>"
                 );
                 $(".container-msg").animate({ scrollTop: $('.container-msg').prop("scrollHeight") }, 500);
@@ -624,64 +624,32 @@
 
             $("#comment").keydown(function (e) {
                 var elemento = this;
-                var tecla = e;
-                if (e.keyCode == 13 && $(this).val() == '') {
+                var teclaPressionada = e.which || e.keyCode;
+                var ENTER = 13;
+ 
+                if ($(elemento).val() == '' && teclaPressionada == ENTER && e.shiftKey == false)
+                {
                     return false;
-
                 }
-                else {
-                    setTimeout(function () {
+                else
+                {
+                    setTimeout(function ()
+                    {
                         $(elemento).css({ "min-height": "22px", "height": "auto", "padding": "0" });
-
                         $(elemento).css("height", $(elemento).prop('scrollHeight') + "px");
 
-                        if ($(elemento).val() == '') {
+                        if ($(elemento).val() == '')
+                        {
                             $(elemento).css("height", "22px");
                         }
-                        if($(elemento).val() != '' && tecla.keyCode == 13)
+                        if ($(elemento).val() != '' && teclaPressionada == ENTER && e.shiftKey == false)
                         {
                             $("#btn-enviar").click();
                         }
                     }, 0);
-
                 }
             });
         });
-
-     //   var textarea = document.querySelector('textarea');
-
-
-       // textarea.addEventListener('keydown', autosize);
-
-       // function autosize() {
-
-
-
-         //   var el = this;
-         //   console.log("this " + this);
-         //   console.log($(this).val().length);
-
-         //   setTimeout(function () {
-                // if(el.style.cssText == 'height: 32px;')
-                // {
-                //     console.log("passei");
-                // }
-                // el.style.cssText = 'min-height:22px;height:auto; padding:0';
-                // // for box-sizing other than "content-box" use:
-                // // el.style.cssText = '-moz-box-sizing:content-box';
-                // el.style.cssText = 'height:' + el.scrollHeight + 'px';
-                // if (el.value == '') {
-                //     el.style.cssText = 'height:' + 22 + 'px';
-                // }
-                // console.log(el.style.cssText);
-
-        //    }, 0);
-
-      //  }
-
-
-
-
     </script>
 </body>
 
