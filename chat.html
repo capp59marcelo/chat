@@ -578,6 +578,15 @@
                             <span style="float: right;padding-top: 5px;font-size: 11px;">10:20</span>
                         </div>
                     </div>
+                    <div style="height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;">
+                        <span class="quinaRight"></span>
+                        <div class="testeRight">
+                            <span>
+                                Lorem 
+                            </span>
+                            <span style="float: right;padding-top: 5px;font-size: 11px;">10:20</span>
+                        </div>
+                    </div>
                 </main>
                 <footer class="logica grey lighten-2" style="width: 100%;">
                     <div style="display: flex;flex-direction: row ">
@@ -613,7 +622,7 @@
                 $(".container-msg").append(
                     "<div style='height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;'>"
                     + "<span class='quinaRight'></span>"
-                    + "<div class='testeRight'> <pre>" + $('#comment').val() + "</pre>  <span style='float: right;padding-top: 5px;font-size: 11px;'>10:20</span> </div>"
+                    + "<div class='testeRight'> <span style=' word-wrap: break-word;    white-space: pre-line;'>" + $.trim($('#comment').val()) + "</span>  <span style='float: right;padding-top: 5px;font-size: 11px;'>10:20</span> </div>"
                     + "</div>"
                 );
                 $(".container-msg").animate({ scrollTop: $('.container-msg').prop("scrollHeight") }, 500);
@@ -626,24 +635,27 @@
                 var elemento = this;
                 var teclaPressionada = e.which || e.keyCode;
                 var ENTER = 13;
- 
-                if ($(elemento).val() == '' && teclaPressionada == ENTER && e.shiftKey == false)
-                {
+
+
+                if ($(elemento).val() == '' && teclaPressionada == ENTER && e.shiftKey == false) {
                     return false;
                 }
-                else
-                {
-                    setTimeout(function ()
-                    {
+                else {
+                    console.log( !$(elemento).val().trim() );
+                    setTimeout(function () {
+                        if ($(elemento).length === 0 || !$(elemento).val().trim() )
+                        {
+                            $(elemento).val('');
+                            $(elemento).css("height", "22px");
+                            return false;
+                        }
                         $(elemento).css({ "min-height": "22px", "height": "auto", "padding": "0" });
                         $(elemento).css("height", $(elemento).prop('scrollHeight') + "px");
 
-                        if ($(elemento).val() == '')
-                        {
+                        if ($(elemento).val() == '') {
                             $(elemento).css("height", "22px");
                         }
-                        if ($(elemento).val() != '' && teclaPressionada == ENTER && e.shiftKey == false)
-                        {
+                        if ($(elemento).val() != '' && teclaPressionada == ENTER && e.shiftKey == false) {
                             $("#btn-enviar").click();
                         }
                     }, 0);
