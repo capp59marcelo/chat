@@ -77,8 +77,25 @@ textarea {
     overflow-x: hidden;
     padding: 10px 10%;
 }
-.indexNav{
-    z-index: -1;
+
+.container-btnEviar
+{
+    width: 70px;
+    display: flex; 
+    flex-direction: column-reverse;
+    padding-bottom: 5px;
+}
+
+#btn-enviar
+{
+    background: unset;
+    border: unset;
+    cursor: pointer;
+    font-size: 25px;
+}
+#btn-enviar:hover
+{
+    font-size: 28px;
 }
 /***********************************************************************
 *

@@ -595,13 +595,10 @@
                             <textarea placeholder="Digite uma menssagem" id="comment"></textarea>
 
                         </div>
-                        <div style="width: 70px;; display: flex; flex-direction: column-reverse">
-                            <div style="text-align: center; padding-bottom: 9px;cursor: pointer;">
-                                <button id="btn-enviar" type="button" value="" style="background: unset;border: unset;cursor: pointer;">
-                                    <i style="font-size: 25px;" class="fa fa-paper-plane" aria-hidden="true"></i>
-                                </button>
-
-                            </div>
+                        <div class="container-btnEviar">
+                            <button id="btn-enviar" type="button" value="">
+                                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                            </button>
                         </div>
                     </div>
 
@@ -619,7 +616,7 @@
             $('#slide-out2').sidenav();
             $(".container-msg").animate({ scrollTop: $('.container-msg').prop("scrollHeight") }, 0);
             $("#btn-enviar").click(function () {
-                if ( $('#comment').val().trim().length > 0) {
+                if ($('#comment').val().trim().length > 0) {
 
                     $(".container-msg").append(
                         "<div style='height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;'>"
