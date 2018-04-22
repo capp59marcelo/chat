@@ -9,47 +9,74 @@ html,body
 /***********************************************************************
 *
 ************************************************************************/
-.teste {
-    background: #dcffc7;
-    min-height: 30px;
-    width: 80%;
-    padding: 10px;
-    border-radius: 0px 10px 10px;
-  box-shadow: 0.7px 1px 5px #00000042;
-}
 
-.testeRight {
-    background: #fafafa;
+.div-balao
+{
+    height: auto;
+    width: 100%;
+    margin: 10px;
+    display: flex;
+}
+.div-balao-left
+{
+    flex-direction: row;
+}
+.div-balao-right
+{
+    flex-direction: row-reverse;
+}
+.balao-msg
+{
     min-height: 30px;
-    width: 80%;
+    width: auto;
+    max-width: 80%;
     padding: 10px;
+}
+.balao-msg > span
+{
+    word-wrap: break-word;
+    white-space: pre-line;
+}
+.balao-left {
+    background: #dcffc7;
+    border-radius: 0px 10px 10px;
+    box-shadow: 0.7px 1px 5px #00000042;
+}
+.balao-right {
+    background: #fafafa;
     border-radius: 10px 0px 10px 10px;
     box-shadow: -0.7px 1px 5px #00000042;
 }
-
-.quinaLeft {
+.quina-balao
+{
     background: transparent;
     position: relative;
     height: 15px;
     width: 15px;
-    display: block;
-    left: -14px;
-    top: 15px;
+    display: block;  
     border: 7px solid;
+}
+.quina-left
+{
+    left: 2px;
+    top: 0px;
     border-color: #dcffc7 #dcffc7 transparent transparent;
 }
-
-.quinaRight {
-    background: transparent;
-    position: relative;
-    height: 15px;
-    width: 15px;
-    display: block;
+.quina-right
+{
     top: 0px;
     right: 2px;
     border: 7px solid;
     border-color: #fafafa transparent transparent #fafafa;
 }
+.balao-hora
+{
+    float: right;
+    padding-top: 5px;
+    font-size: 11px;
+    padding-left: 10px;
+}
+
 .div-menssagem
 {
     display: flex;
