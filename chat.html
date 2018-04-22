@@ -588,12 +588,10 @@
                         </div>
                     </div>
                 </main>
-                <footer class="logica grey lighten-2" style="width: 100%;">
-                    <div style="display: flex;flex-direction: row ">
-                        <div style="width: 100%;margin: 5px; padding: 5px;background: white; border-radius: 5px;">
-
-                            <textarea placeholder="Digite uma menssagem" id="comment"></textarea>
-
+                <footer class="grey lighten-2" style="width: 100%;">
+                    <div class="div-menssagem">
+                        <div class="container-Menssagem">
+                            <textarea id="ctMenssagem" class="textarea-menssagem" placeholder="Digite uma menssagem" ></textarea>
                         </div>
                         <div class="container-btnEviar">
                             <button id="btn-enviar" type="button" value="">
@@ -616,22 +614,22 @@
             $('#slide-out2').sidenav();
             $(".container-msg").animate({ scrollTop: $('.container-msg').prop("scrollHeight") }, 0);
             $("#btn-enviar").click(function () {
-                if ($('#comment').val().trim().length > 0) {
+                if ($('#ctMenssagem').val().trim().length > 0) {
 
                     $(".container-msg").append(
                         "<div style='height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;'>"
                         + "<span class='quinaRight'></span>"
-                        + "<div class='testeRight'> <span style=' word-wrap: break-word;    white-space: pre-line;'>" + $.trim($('#comment').val()) + "</span>  <span style='float: right;padding-top: 5px;font-size: 11px;'>10:20</span> </div>"
+                        + "<div class='testeRight'> <span style=' word-wrap: break-word;    white-space: pre-line;'>" + $.trim($('#ctMenssagem').val()) + "</span>  <span style='float: right;padding-top: 5px;font-size: 11px;'>10:20</span> </div>"
                         + "</div>"
                     );
                     $(".container-msg").animate({ scrollTop: $('.container-msg').prop("scrollHeight") }, 500);
-                    $('#comment').val('');
-                    $('#comment').focus();
-                    $('#comment').css('height', '22px');
+                    $('#ctMenssagem').val('');  
+                    $('#ctMenssagem').focus();
+                    $('#ctMenssagem').css('height', '22px');
                 }
             });
 
-            $("#comment").keydown(function (e) {
+            $("#ctMenssagem").keydown(function (e) {
                 var elemento = this;
                 var teclaPressionada = e.which || e.keyCode;
                 var ENTER = 13;

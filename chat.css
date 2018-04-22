@@ -50,8 +50,20 @@ html,body
     border: 7px solid;
     border-color: #fafafa transparent transparent #fafafa;
 }
-
-textarea {
+.div-menssagem
+{
+    display: flex;
+    flex-direction: row;
+}
+.container-Menssagem
+{
+    width: 100%;
+    margin: 5px; 
+    padding: 5px;
+    background: white; 
+    border-radius: 5px;
+}
+.textarea-menssagem {
     height: 22px;
     max-height: 139px;
     overflow-x: hidden;
