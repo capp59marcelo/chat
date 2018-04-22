@@ -604,9 +604,9 @@
                 if ($('#ctMenssagem').val().trim().length > 0) {
 
                     $(".container-msg").append(
-                        "<div style='height: auto;width: 100%;margin: 10px;display: flex;flex-direction: row-reverse;'>"
+                        "<div class='div-balao div-balao-right'>"
                         + "<span class='quina-balao quina-right'></span>"
-                        + "<div class='balao-msg balao-right'><span>" + $.trim($('#ctMenssagem').val()) + "</span>  <span style='float: right;padding-top: 5px;font-size: 11px;'>10:20</span> </div>"
+                        + "<div class='balao-msg balao-right'><span>" + $.trim($('#ctMenssagem').val()) + "</span>  <span class='balao-hora' >10:20</span> </div>"
                         + "</div>"
                     );
                     $(".container-msg").animate({ scrollTop: $('.container-msg').prop("scrollHeight") }, 500);
