@@ -55,6 +55,7 @@
                 <li style="display: flex;">
                     <ul id="slide-out2" class="sidenav">
                         <li>
+                            <a style="position: absolute;z-index: 1; right: 10px; top: 20px;" id="btn-voltar">voltar</a>
                             <div class="user-view">
                                 <div class="background">
                                     <img src="">
@@ -73,9 +74,6 @@
                         <li>
                             <a>
                                 <i class="material-icons">cloud</i>First Link With Icon</a>
-                        </li>
-                        <li>
-                            <a id="btn-voltar">voltar</a>
                         </li>
                         <li>
                             <div class="divider"></div>
@@ -471,15 +469,14 @@
                         <span class="quina-balao quina-right"></span>
                         <div class="balao-msg balao-right">
                             <span>
-                                Lorem  eletrônica, permanecendo essencialmente inalterado. Se popularizou
-                                na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e
-                                mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como
-                                Aldus PageMaker.
+                                Lorem eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques
+                                contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares
+                                de editoração eletrônica como Aldus PageMaker.
                             </span>
                             <span class="balao-hora">10:20</span>
                         </div>
                     </div>
-                    
+
 
                     <div class="div-balao div-balao-right">
                         <span class="quina-balao quina-right"></span>
@@ -512,7 +509,7 @@
                         </div>
                     </div>
 
-                    
+
                     <div class="div-balao div-balao-left">
                         <span class="quina-balao quina-left"></span>
                         <div class="balao-msg balao-left">
@@ -526,7 +523,7 @@
                         <div class="balao-msg balao-right">
                             <span>
                                 Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o
-                                século 
+                                século
                             </span>
                             <span class="balao-hora">10:20</span>
                         </div>
@@ -543,9 +540,7 @@
                         <span class="quina-balao quina-right"></span>
                         <div class="balao-msg balao-right">
                             <span>
-                                Lorem Ipsum é simplesmente 
-                                uma simulação de texto da indústria 
-                                tipográfica e de impressos, e vem sendo utilizado desde o
+                                Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o
                                 século XVI, qu
                             </span>
                             <span class="balao-hora">10:20</span>
@@ -564,12 +559,7 @@
                         <div class="balao-msg balao-right">
                             <span>
                                 Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o
-                                
-
-                                sasadasd
-
-
-                                sad
+                                sasadasd sad
                             </span>
                             <span class="balao-hora">10:20</span>
                         </div>
@@ -598,9 +588,9 @@
     <script>
         $(document).ready(function () {
             $('#slide-out').sidenav();
-           var elem =  $('#slide-out2').sidenav();
-           var instance = M.Sidenav.getInstance(elem);
-            $("#btn-voltar").click(function(){
+            var elem = $('#slide-out2').sidenav();
+            var instance = M.Sidenav.getInstance(elem);
+            $("#btn-voltar").click(function () {
                 instance.close();
             });
 
