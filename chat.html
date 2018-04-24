@@ -75,7 +75,7 @@
                                 <i class="material-icons">cloud</i>First Link With Icon</a>
                         </li>
                         <li>
-                            <a href="#!">Second Link</a>
+                            <a id="btn-voltar">voltar</a>
                         </li>
                         <li>
                             <div class="divider"></div>
@@ -598,7 +598,12 @@
     <script>
         $(document).ready(function () {
             $('#slide-out').sidenav();
-            $('#slide-out2').sidenav();
+           var elem =  $('#slide-out2').sidenav();
+           var instance = M.Sidenav.getInstance(elem);
+            $("#btn-voltar").click(function(){
+                instance.close();
+            });
+
             $(".container-msg").animate({ scrollTop: $('.container-msg').prop("scrollHeight") }, 0);
             $("#btn-enviar").click(function () {
                 if ($('#ctMenssagem').val().trim().length > 0) {
