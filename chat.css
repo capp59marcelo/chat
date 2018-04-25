@@ -15,14 +15,20 @@ html,body
     height: auto;
     width: 100%;
     margin: 10px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
 }
 .div-balao-left
 {
+    -ms-flex-direction:row;
+    -webkit-flex-direction:row;
     flex-direction: row;
 }
 .div-balao-right
 {
+    -ms-flex-direction:row-reverse;
+    -webkit-flex-direction:row-reverse;
     flex-direction: row-reverse;
 }
 .balao-msg
@@ -79,7 +85,11 @@ html,body
 
 .div-menssagem
 {
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction:row;
+    -webkit-flex-direction:row;
     flex-direction: row;
 }
 .container-Menssagem
@@ -105,7 +115,11 @@ html,body
 
 .main {
     padding-left: 300px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction:column;
+    -webkit-flex-direction:column;
     flex-direction: column;
     height: 100%;
 }
@@ -120,7 +134,11 @@ html,body
 .container-btnEviar
 {
     width: 70px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex; 
+    -ms-flex-direction:column-reverse;
+    -webkit-flex-direction:column-reverse;
     flex-direction: column-reverse;
     padding-bottom: 5px;
 }
@@ -142,6 +160,15 @@ html,body
     overflow-x: hidden; 
     overflow-y: auto;
     padding-bottom: 30px;
+}
+.container-body
+{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction:column;
+    -webkit-flex-direction:column;
+    flex-direction: column;
 }
 /***********************************************************************
 *
