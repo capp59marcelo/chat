@@ -142,7 +142,16 @@ html,body
     flex-direction: column-reverse;
     padding-bottom: 5px;
 }
-
+.container-conteudo
+{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; 
+    -ms-flex-direction:column;
+    -webkit-flex-direction:column;
+    flex-direction: column; 
+    height: 100%;
+}
 #btn-enviar
 {
     background: unset;
@@ -169,6 +178,15 @@ html,body
     -ms-flex-direction:column;
     -webkit-flex-direction:column;
     flex-direction: column;
+}
+.info-perfil-right
+{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    font-size: 20px;
 }
 /***********************************************************************
 *
