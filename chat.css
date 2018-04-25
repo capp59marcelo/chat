@@ -136,6 +136,13 @@ html,body
 {
     font-size: 28px;
 }
+.container-lista-conversas
+{
+    height: 67vh;
+    overflow-x: hidden; 
+    overflow-y: auto;
+    padding-bottom: 30px;
+}
 /***********************************************************************
 *
 ************************************************************************/
@@ -148,6 +155,10 @@ html,body
     .container-msg
     {
         padding: 10px 3%;
+    }
+    .container-lista-conversas
+    {
+        padding-bottom: 80px;
     }
 }
 @media (max-width: 767.98px) {}
