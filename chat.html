@@ -53,43 +53,29 @@
                     </div>
                 </li>
                 <li style="display: flex;">
+
+                </li>
+                <li style="display: flex;">
+                    <a href="#" data-target="slide-out2" class="sidenav-trigger waves-effect waves-teal" style="margin-left: 50px">
+                        <i class="fas fa-users" style="font-size: 2em"></i>Contatos
+                    </a>
+                    <a href="#" data-target="slide-out3" class="sidenav-trigger waves-effect waves-teal" style="margin-left: 50px">
+                        <i class="fas fa-users" style="font-size: 2em"></i>
+                        Configuracoes
+                    </a>
                     <ul id="slide-out2" class="sidenav">
                         <li>
-                            <a style="background: unset;padding: 0px;margin-right: 10px;position: absolute;z-index: 1; right: 10px; top: 20px;" id="btn-voltar" title="Voltar">
+                            <a style="background: unset;padding: 0px;margin-right: 10px;position: absolute;z-index: 1; right: 10px; top: 20px;" id="btn-voltar"
+                                title="Voltar">
                                 <i style="padding: 0px; margin: 0px;font-size: 2.5em;" class="fas fa-arrow-left"></i>
                             </a>
-                            <div class="user-view">
-                                <div class="background">
-                                    <img src="">
-                                </div>
-                                <a href="#user">
-                                    <img class="circle" src="images/me.jpg">
-                                </a>
-                                <a href="#name">
-                                    <span class="white-text name">John Doe</span>
-                                </a>
-                                <a href="#email">
-                                    <span class="white-text email">jdandturk@gmail.com</span>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <a>
-                                <i class="material-icons">cloud</i>First Link With Icon</a>
-                        </li>
-                        <li>
-                            <div class="divider"></div>
-                        </li>
-                        <li>
-                            <a class="subheader">Subheader</a>
-                        </li>
-                        <li>
-                            <a class="waves-effect">Third Link With Waves</a>
                         </li>
                     </ul>
-                    <a href="#" data-target="slide-out2" class="sidenav-trigger waves-effect waves-teal" style="margin-left: 50px">
-                        <i class="fas fa-users" style="font-size: 2em"></i>Contatos</a>
+                    <ul id="slide-out3" class="sidenav">
+                        <li></li>
+                    </ul>
                 </li>
+
                 <li>
                     <ul class="container-lista-conversas">
                         <li>
@@ -588,6 +574,11 @@
             var instance = M.Sidenav.getInstance(elem);
             $("#btn-voltar").click(function () {
                 instance.close();
+            });
+            var elem2 = $('#slide-out3').sidenav();
+            var instance2 = M.Sidenav.getInstance(elem2);
+            $("#btn-voltar").click(function () {
+                instance2.close();
             });
 
             $(".container-msg").animate({ scrollTop: $('.container-msg').prop("scrollHeight") }, 0);
