@@ -9,7 +9,19 @@ html,body
 /***********************************************************************
 *
 ************************************************************************/
-
+#imagem-configuracoes
+{
+    height: 75px;
+    width: 75px;
+    background: red !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#imagem-configuracoes:hover > #teste
+{
+    display: none;
+}
 .div-balao
 {
     height: auto;
