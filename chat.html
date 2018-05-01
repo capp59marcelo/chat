@@ -70,11 +70,17 @@
                             </a>
                         </li>
                     </ul>
-                    <ul id="slide-out3" class="sidenav">
+                    <ul id="slide-out3" class="sidenav" style="color: #000;">
                         <li style="width: 100%; height: 100%;">
-                            <div style="display: flex;flex-direction: column; height: 100%;width: 100%;background: red">
-                                <h4>configurações</h4>
-                                <form action="#">
+                            <div style="display: flex;flex-direction: column; height: 100%;width: 100%;">
+                                <a style="background: unset;padding: 0px;margin-right: 10px;position: absolute;z-index: 1; left: 10px; top: 15px;" id="btn-voltar2"
+                                    title="Voltar">
+                                    <i style="padding: 0px; margin: 0px;font-size: 2em;height: 30px;color: rgba(0,0,0,0.54);" class="fas fa-arrow-left"></i>
+                                </a>
+                                <h4 style="    font-size: 20px; left: 23px;text-align: center;">
+                                    configurações
+                                </h4>
+                                <form action="#" style="height: auto;">
                                     <div id="imagem-configuracoes">
                                         <img id="img-perfil" style="height: 98px;width: 100px;" class="circle" src="images/me.jpg">
                                         <div class="div-hover">
@@ -84,11 +90,21 @@
                                     </div>
                                     <input id="fiAlterar-imagem" type="file" style="display: none;">
                                 </form>
+                                <div class="card">
+                                    <div class="row valign-wrapper" style="margin-bottom: 0px;">
+                                        <div class="col s10">
+                                            <span style="width: 100%;padding-left: 5px;">Nome do fulano</span>
+                                        </div>
+                                        <div class="col s3">
+                                            <a style="cursor: pointer;background: unset;padding-right: 10px;" class="modal-trigger" href="#modal1">
+                                                <i style="height: 25px;color: rgba(0,0,0,0.54);" class="fas fa-pencil-alt" title="Editar"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                            <a style="background: unset;padding: 0px;margin-right: 10px;position: absolute;z-index: 1; right: 10px; top: 20px;" id="btn-voltar2"
-                                title="Voltar">
-                                <i style="padding: 0px; margin: 0px;font-size: 2.5em;" class="fas fa-arrow-left"></i>
-                            </a>
+
                         </li>
                     </ul>
                 </li>
@@ -582,10 +598,33 @@
 
         </main>
     </div>
+
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal" style="width: 90%;max-width: 650px;    min-height: 200px;">
+        <div class="modal-header" style="padding: 10px 10px 0px 10px;text-align: center;">
+            <h4>Alterar nome</h4>
+        </div>
+        <div class="modal-content" style="padding-top: 0px;">
+            <form action="">
+                <div class="input-field" style="margin-bottom: 25px;">
+                    <input id="ctNome" type="text" class="validate" required>
+                    <label for="ctNome">Nome</label>
+                </div>
+
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">salvar</a>
+        </div>
+    </div>
     <script src="componentes/jquery-3.3.1/jquery-3.3.1.min.js"></script>
     <script src="componentes/materialize/js/materialize.min.js"></script>
     <script>
         $(document).ready(function () {
+
+            $('#modal1').modal();
+
             $('#slide-out').sidenav();
             var elem = $('#slide-out2').sidenav();
             var instance = M.Sidenav.getInstance(elem);
